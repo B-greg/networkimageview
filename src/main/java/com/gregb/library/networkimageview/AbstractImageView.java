@@ -1,9 +1,9 @@
 package com.gregb.library.networkimageview;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-import com.smartsoftasia.bigglibrary.helper.Validator;
 
 /**
  * Created by gregoire on 9/4/14.
@@ -46,7 +46,8 @@ public abstract class AbstractImageView extends ImageView {
 
 
     public void downloadImageFromURL(String url) {
-        if (Validator.isValid(url)) {
+
+        if (!TextUtils.isEmpty(url)) {
             ImageDownloader.loadImage(getContext(), url, this);
         }
     }
@@ -56,7 +57,7 @@ public abstract class AbstractImageView extends ImageView {
     }
 
     public void downloadImageFromUri(String uri) {
-        if (Validator.isValid(uri)) {
+        if (!TextUtils.isEmpty(uri)) {
             ImageDownloader.loadImage(getContext(), "file:///" + uri, this);
         }
     }

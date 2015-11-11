@@ -10,7 +10,6 @@ import android.graphics.drawable.LayerDrawable;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.util.Log;
-import com.smartsoftasia.bigglibrary.R;
 
 @SuppressWarnings("UnusedDeclaration")
 public class RoundedImageView extends  AbstractImageView{
