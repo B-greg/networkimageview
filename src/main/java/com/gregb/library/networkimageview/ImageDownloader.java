@@ -48,7 +48,9 @@ public class ImageDownloader {
     public static void loadImage(final Context context, final String url, final ImageView imageView) {
         Glide.with(context)
                 .load(url)
+                .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.RESULT)
+                .crossFade()
                 .into(imageView);
     }
 
