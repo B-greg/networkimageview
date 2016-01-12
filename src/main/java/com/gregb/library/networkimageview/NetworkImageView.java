@@ -7,7 +7,7 @@ import android.util.AttributeSet;
  * Created by gui on 07/08/2014.
  */
 public class NetworkImageView extends AbstractImageView{
-    private static final String TAG = "GBImageView";
+    private static final String TAG = "NetworkImageView";
 
     public NetworkImageView(Context context) {
         super(context);
