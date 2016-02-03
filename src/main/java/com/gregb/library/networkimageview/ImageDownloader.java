@@ -47,6 +47,7 @@ public class ImageDownloader {
     public static void loadImage(final Context context, final String url, final ImageView imageView) {
       Picasso.with(context)
                 .load(url)
+          .fit()
                 .centerCrop()
             //    .diskCacheStrategy(DiskCacheStrategy.RESULT)
             //    .crossFade()
@@ -57,6 +58,7 @@ public class ImageDownloader {
                                  final int downloadIndicator) {
       Picasso.with(context)
                 .load(url)
+          .fit()
                 .centerCrop()
             //    .diskCacheStrategy(DiskCacheStrategy.RESULT)
                 .placeholder(downloadIndicator)
