@@ -3,8 +3,7 @@ package com.gregb.library.networkimageview;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.squareup.picasso.Picasso;
 
 /**
  * Created by gui on 07/08/2014.
@@ -46,22 +45,22 @@ public class ImageDownloader {
     }
 
     public static void loadImage(final Context context, final String url, final ImageView imageView) {
-        Glide.with(context)
+      Picasso.with(context)
                 .load(url)
                 .centerCrop()
-                .diskCacheStrategy(DiskCacheStrategy.RESULT)
-                .crossFade()
+            //    .diskCacheStrategy(DiskCacheStrategy.RESULT)
+            //    .crossFade()
                 .into(imageView);
     }
 
     public static void loadImage(final Context context, final String url, final ImageView imageView,
                                  final int downloadIndicator) {
-        Glide.with(context)
+      Picasso.with(context)
                 .load(url)
                 .centerCrop()
-                .diskCacheStrategy(DiskCacheStrategy.RESULT)
+            //    .diskCacheStrategy(DiskCacheStrategy.RESULT)
                 .placeholder(downloadIndicator)
-                .crossFade()
+            //    .crossFade()
                 .into(imageView);
     }
 

@@ -2,8 +2,7 @@ package com.gregb.library.networkimageview;
 
 import android.content.Context;
 import android.widget.ImageView;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.squareup.picasso.Picasso;
 
 public class ImageHelper {
 
@@ -20,22 +19,22 @@ public class ImageHelper {
     }
 
     public static void loadImage(Context context, final String url, final ImageView imageView) {
-        Glide.with(context)
+      Picasso.with(context)
                 .load(url)
                 .centerCrop()
-                .diskCacheStrategy(DiskCacheStrategy.RESULT)
-                .crossFade()
+               // .diskCacheStrategy(DiskCacheStrategy.RESULT)
+              //  .crossFade()
                 .into(imageView);
     }
 
     @Deprecated
     public static void loadImage(Context context, final String url, final ImageView imageView,
                                  final ImageDownloaderListener listener) {
-        Glide.with(context)
+      Picasso.with(context)
                 .load(url)
                 .centerCrop()
-                .diskCacheStrategy(DiskCacheStrategy.RESULT)
-                .crossFade()
+              //  .diskCacheStrategy(DiskCacheStrategy.RESULT)
+              //  .crossFade()
                 .into(imageView);
     }
 
