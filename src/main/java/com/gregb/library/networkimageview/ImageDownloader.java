@@ -48,8 +48,7 @@ public class ImageDownloader {
   public static void loadImage(final Context context, final String url, final ImageView imageView) {
     Picasso.with(context)
         .load(url)
-        .fit()
-
+        //.fit()
         //    .diskCacheStrategy(DiskCacheStrategy.RESULT)
         //    .crossFade()
         .into(imageView);
@@ -59,13 +58,12 @@ public class ImageDownloader {
                                final int downloadIndicator) {
     Picasso.with(context)
         .load(url)
-        .fit()
-        .centerCrop()
-        //    .diskCacheStrategy(DiskCacheStrategy.RESULT)
+        //  .fit()
+        //  .centerCrop()
+        //  .diskCacheStrategy(DiskCacheStrategy.RESULT)
         .placeholder(downloadIndicator)
         //    .crossFade()
         .into(imageView);
   }
-
 
 }
